@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Menu</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		.menu {
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.menu-item {
+			margin: 20px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+	</style>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAT-NzXL2bA3Zr3u-QqMI5plZ9n1XKDoeM",
+        authDomain: "blood-atm-82819.firebaseapp.com",
+        databaseURL: "https://blood-atm-82819-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "blood-atm-82819",
+        storageBucket: "blood-atm-82819.appspot.com",
+        messagingSenderId: "391194856244",
+        appId: "1:391194856244:web:82027bfa5d5fe256b4b361"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script> 
+</head>
+<body>
+	<div class="menu">
+		<div class="menu-item" onclick="location.href='request_blood.html'">Request Blood</div>
+		<div class="menu-item" onclick="location.href='donate_blood.html'">Donate Blood</div>
+	</div>
+</body>
+</html>

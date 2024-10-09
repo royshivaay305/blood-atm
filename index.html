@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood Bank App</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		.logo {
+			width: 100px;
+			height: 100px;
+			margin: 50px auto;
+		}
+	</style>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyAT-NzXL2bA3Zr3u-QqMI5plZ9n1XKDoeM",
+        authDomain: "blood-atm-82819.firebaseapp.com",
+        databaseURL: "https://blood-atm-82819-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "blood-atm-82819",
+        storageBucket: "blood-atm-82819.appspot.com",
+        messagingSenderId: "391194856244",
+        appId: "1:391194856244:web:82027bfa5d5fe256b4b361"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+	<div style="text-align: center;">
+	<img src="logo.png" class="logo">
+	<h1>Welcome to Blood ATM</h1>
+	<button onclick="location.href='main_menu.html'">GO</button>
+	</div>
+</body>
+</html>
