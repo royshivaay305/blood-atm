@@ -1,16 +1,19 @@
 [build]
-  publish = "public"  # Or wherever your static assets are
   command = "npm run build"
+  publish = "public"
 
 [functions]
-  directory = "functions"  # This points to your functions folder
+  directory = "functions"
+ node_bundler = "esbuild"
 
-  [[functions]]
-    name = "update"  # Your function name that Telegram uses
-    timeout = 10  # Timeout in seconds (increase if needed)
-    memory = 1024  # Allocating 1 GB of memory
+[[functions]]
+  function = "telegram-bot"
+  path = "/api/telegram-bot"
+  node_bundler = "esbuild"
+  included_files = ["node_modules/**/*"]
 
-[[redirects]]
+[redirects]
+  [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/api/telegram-bot"
   status = 200
