@@ -1,19 +1,16 @@
 [build]
-  command = "npm run build"
   publish = "public"
+  command = "npm run build"
 
 [functions]
   directory = "functions"
- node_bundler = "esbuild"
 
-[[functions]]
-  function = "telegram-bot"
-  path = "/api/telegram-bot"
-  node_bundler = "esbuild"
-  included_files = ["node_modules/**/*"]
+[functions.update]
+  path = "/api/update"
+  timeout = 10
+  memory = 1024
 
 [redirects]
-  [[redirects]]
   from = "/*"
-  to = "/api/telegram-bot"
+  to = "/index.html"
   status = 200
