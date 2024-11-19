@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blood Bank App</title>
-	<style>
-		body {
-			background-color: #f2f2f2;
-		}
-		.logo {
-			width: 100px;
-			height: 100px;
-			margin: 50px auto;
-		}
-	</style>
+    <title>Blood Bank App</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
     <script>
       var firebaseConfig = {
@@ -27,10 +58,10 @@
     </script>
 </head>
 <body>
-	<div style="text-align: center;">
-	<img src="https://img.freepik.com/free-vector/event-logo-template_23-2149446872.jpg" class="logo">
-	<h1>Welcome to Blood ATM</h1>
-	<button onclick="location.href='main_menu.html'">GO</button>
-	</div>
+    <div class="container">
+        <img src="https://img.freepik.com/free-vector/event-logo-template_23-2149446872.jpg" class="logo" alt="Blood Bank Logo">
+        <h1>Welcome to Blood ATM</h1>
+        <button onclick="location.href='main_menu.html'">GO</button>
+    </div>
 </body>
 </html>
