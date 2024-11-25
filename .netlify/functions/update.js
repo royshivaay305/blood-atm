@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
-const token = '8180698812:AAFzqD-H-Vo1Kcw6nZd_3GsLgYF_szu1kOE';
+const token = '7514924456:AAE3Ka3YPnzb_C0jiZe9DL22w3R2f7A19pg';
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on('message', (msg) => {
@@ -12,13 +12,13 @@ bot.on('message', (msg) => {
         [
           {
             "text": "Start",
-            "url": "https://blood-atm.netlify.app/"
+            "url": "https://blood-map.netlify.app/"
           }
         ]
       ]
     };
 
-    bot.sendMessage(chatId, 'Welcome to Blood ATM!', {
+    bot.sendMessage(chatId, 'Welcome to Blood MAP!', {
       reply_markup: JSON.stringify(startButton)
     });
   }
